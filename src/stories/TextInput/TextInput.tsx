@@ -19,12 +19,12 @@ export const TextInput = ({
           <div className="self-stretch px-[11px] justify-start items-center gap-2.5 flex">
               <div className="w-[107.04px] h-[19.26px] bg-[#aab2f8] rounded-[25px]"/>
               <div
-                  className="text-center text-black text-base font-bold font-['Albert Sans'] leading-normal tracking-tight">Field
+                  className="text-center text-black text-base font-bold font-sans leading-normal tracking-tight">Field
                   name
               </div>
           </div>
           <div
-              className="w-[310px] text-[#6c757d] text-base font-normal font-['Roboto'] leading-normal tracking-tight">Placeholder
+              className="w-[310px] text-[#6c757d] text-base font-normal font-sans leading-normal tracking-tight">Placeholder
           </div>
       </div>
   );

@@ -27,6 +27,9 @@ export default {
       'h2': '40px',
       'h3': '30px',
       'body': '16px',
+    },
+    fontFamily: {
+      'sans': 'Albert Sans'
     }
   },
   plugins: [],
