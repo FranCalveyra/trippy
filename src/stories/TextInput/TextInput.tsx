@@ -14,18 +14,9 @@ export const TextInput = ({
   value = ""
 }: TextInputProps) => {
   return (
-      <div className="w-[371px] h-[57px] pl-[34px] pr-[37px] justify-start items-center inline-flex">
-          <div className="w-[371px] h-[57px] bg-[#d7d0fc]/0 rounded-[15px] shadow border border-black"/>
-          <div className="self-stretch px-[11px] justify-start items-center gap-2.5 flex">
-              <div className="w-[107.04px] h-[19.26px] bg-[#aab2f8] rounded-[25px]"/>
-              <div
-                  className="text-center text-black text-base font-bold font-sans leading-normal tracking-tight">Field
-                  name
-              </div>
-          </div>
-          <div
-              className="w-[310px] text-[#6c757d] text-base font-normal font-sans leading-normal tracking-tight">Placeholder
-          </div>
+      <div className={"relative"}>
+          <label htmlFor={"text"} className={"absolute rounded-2xl -top-3 left-5 bg-primary-300 px-4 font-bold"}>{label}</label>
+          <input id={"text"} className={"peer rounded-2xl h-16 w-96 border text-body pl-8"} placeholder={placeholder} value={value}/>
       </div>
   );
 };
