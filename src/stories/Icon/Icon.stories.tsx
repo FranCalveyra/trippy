@@ -3,7 +3,7 @@ import Button from "./Icon.tsx";
 import Icon from "./Icon.tsx";
 
 const meta: Meta<typeof Icon> ={
-    title:'Components/Icon',
+    title:'Atoms/Icon',
     component:Icon,
     tags: ['autodocs'],
     control:{

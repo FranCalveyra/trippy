@@ -2,7 +2,7 @@ import {Meta, StoryObj} from "@storybook/react";
 import IconButton from "./IconButton.tsx";
 
 const meta: Meta<typeof IconButton> ={
-    title:'Components/IconButton',
+    title:'Molecules/IconButton',
     component:IconButton,
     tags: ['autodocs'],
     // argTypes:{
