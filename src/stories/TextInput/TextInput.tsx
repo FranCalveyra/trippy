@@ -1,3 +1,5 @@
+import {InputHTMLAttributes} from "react";
+
 export interface TextInputProps {
   /** The field's descriptor, shown above it (e.g. "Password") */
   label: string;
@@ -12,7 +14,7 @@ export const TextInput = ({
   label,
   placeholder = "",
   value = ""
-}: TextInputProps) => {
+}: TextInputProps) => { //TODO: use InputHTMLAttributes<TextInputProps> for props
   return (
       <div className={"relative"}>
           <label htmlFor={"text"} className={"absolute rounded-2xl -top-3 left-5 bg-primary-300 px-4 font-bold"}>{label}</label>
