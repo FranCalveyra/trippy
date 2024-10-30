@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       borderRadius: {
-        'button': '32px'
+        'button': '32px',
+        'modal': '20px'
       }
     },
     colors:{
       primary:{
+        200: '#DADDFC',
         300: '#AAB2F8',
         400: '#7888F5',
         500: '#3A5EEF',

@@ -17,9 +17,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const eeeee: Story = {
+export const Default: Story = {
   args: {
     title: "Remove contact",
-    message: "Are you sure you want to delete this user from your contacts list?"
+    message: "Are you sure you want to delete this user from your contacts list?",
+    primaryValue: "Yes",
+    secondaryValue: "No"
   },
 };
