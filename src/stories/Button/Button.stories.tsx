@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> ={
     tags: ['autodocs'],
     argTypes:{
         variant:{
-            options:['fulfilled','outlined','ghost','white'],
+            options:['fulfilled','outlined'],
             control:{type:'select'},
             defaultValue:'fulfilled'
         },
@@ -24,16 +24,16 @@ export default meta
 type Story = StoryObj<typeof Button>
 
 export const Default: Story = {
-    name:'Default',
+    name:'Fulfilled',
     render: (args) => <Button {...args}>Button</Button>
 }
 
 export const Fulfilled: Story = {
-    name:'Fulfilled',
-    render: (args) => <Button variant={'fulfilled'} {...args}>Button</Button>
+    name:'Outlined',
+    render: (args) => <Button variant={'outlined'} {...args}>Button</Button>
 }
 export const Outlined: Story = {
-    name:'Outlined',
+    name:'adsda',
     render: (args) =>
         <div className={'flex flex-col w-[250px] gap-2'}>
             <Button variant={'outlined'} size={'large'} {...args}>Button</Button>

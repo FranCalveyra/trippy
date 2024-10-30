@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      borderRadius: {
+        'button': '32px'
+      }
+    },
     colors:{
       primary:{
         300: '#AAB2F8',
@@ -37,8 +41,9 @@ export default {
         300: '#DEE2E6',
         200: '#E9ECEF',
         100: '#F8F9FA',
-        white: '#FFFFFF'
-      }
+
+      },
+      white: '#FFFFFF'
     },
     fontSize:{
       'h1': ['48px', '140%'],

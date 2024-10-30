@@ -2,35 +2,26 @@ import React, {ReactNode,ButtonHTMLAttributes} from 'react'
 import {cva, VariantProps} from "class-variance-authority";
 
 
-const buttonVariant = cva(['w-full sm:w-fit','rounded-lg '],{
+const buttonVariant = cva(['rounded-button'],{
     variants:{
         variant:{
+            //TODO: how to specify color, considering 'hover' and 'disabled' should be tweaked?
             fulfilled:[
-                'bg-primary-500 text-white',
-                'hover:bg-primary-700 hover:text-white',
+                'bg-secondary-300 text-white',
+                'hover:bg-secondary-500 hover:text-white',
                 'disabled:bg-grey-300 disabled:text-grey-700',
             ],
             outlined:[
-                'bg-white text-primary-500 border border-primary-500',
-                'hover:bg-primary-300',
+                'bg-white text-secondary-300 border border-secondary-300',
+                'hover:bg-secondary-300 hover:text-white',
                 'disabled:bg-grey-300 disabled:border-grey-300 disabled:text-grey-700',
             ],
-            ghost: [
-                "bg-transparent text-primary-500",
-                "hover:bg-primary-300 hover:text-primary-500",
-                "disabled:bg-grey-100 disabled:text-grey-700"
-            ],
-            white: [
-                "bg-white text-primary-500",
-                "hover:bg-primary-300 hover:text-primary-500",
-                "disabled:bg-grey-100 disabled:text-grey-700"
-            ],
-            black:[]
         },
         size:{
+            // TODO: use actual Figma's sizes for 'small' and 'large'
             small:['px-4 py-2 text-xs'],
-            medium:['px-4 py-3 text-sm'],
-            large:['px-4 py-3 text-base'],
+            medium:['px-7 py-4 text-body'],
+            large:['px-7 py-4 text-h3'],
         }
     },
     defaultVariants:{
