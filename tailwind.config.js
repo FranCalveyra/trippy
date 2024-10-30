@@ -41,10 +41,10 @@ export default {
       }
     },
     fontSize:{
-      'h1': '48px',
-      'h2': '40px',
-      'h3': '30px',
-      'body': '16px',
+      'h1': ['48px', '140%'],
+      'h2': ['40px', '120%'],
+      'h3': ['30px', '110%'],
+      'body': ['16px', '110%'],
     },
     fontFamily: {
       'sans': 'Albert Sans'
