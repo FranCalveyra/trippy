@@ -13,7 +13,7 @@ export const CategorySelection = () => {
             <div className="w-72 text-center text-black text-base font-roboto font-normal leading-6 tracking-wide">
                 Which category describes you best?
             </div>
-            <div className="w-84 h-10 relative rounded-full border border-black flex items-center overflow-hidden">
+            <div className="w-96 h-10 relative rounded-full border border-black flex items-center overflow-hidden">
                 {options.map((option, index) => (
                     <div
                         key={index}
