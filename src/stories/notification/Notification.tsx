@@ -9,7 +9,7 @@ interface NotificationProps {
 
 export const Notification = ({ iconVariant, title, description }: NotificationProps) => {
     return (
-        <div className="w-[365px] h-[78px] bg-primary-300 rounded-[20px] flex items-center px-4 gap-3">
+        <div className="w-[365px] h-[78px]  rounded-[20px] border border-primary-300 flex items-center px-4 gap-3">
             <Icon variant={iconVariant}/>
             <div className="flex flex-col">
                 <div className="text-neutral-black text-base font-bold font-['Albert Sans'] leading-normal tracking-tight">
