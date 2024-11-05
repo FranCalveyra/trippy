@@ -15,6 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const example: Story = {
     args: {
+        iconVariant: 'warning',
         title: "Stroke in Av. Cordoba",
         description: "There is a stroke in Av. Cordoba"
     }
