@@ -2,12 +2,12 @@ import Icon, { IconProps } from "../Icon/Icon.tsx";
 import { cva } from "class-variance-authority";
 
 const notificationVariant = cva(
-    "w-full max-w-[393px] h-auto px-4 py-3 gap-3",
+    "flex items-start px-4 py-3",
     {
         variants: {
             variant: {
-                default: "border-b border-primary-300 flex items-center",
-                warning: "w-full max-w-[600px] bg-status-warning rounded-[13px] p-6 flex flex-col gap-4"
+                default: "w-full max-w-[393px] h-auto border-b border-primary-300 items-center",
+                warning: "w-[319px] h-[134px] bg-status-warning rounded-[13px] flex flex-col justify-center px-6 gap-1"
             },
         },
         defaultVariants: {
@@ -27,15 +27,15 @@ export const Notification = ({ variant, iconVariant, title, description }: Notif
     return (
         <div className={notificationVariant({ variant })}>
             {variant === "warning" ? (
-                <div className="flex items-start gap-4 w-full">
-                    <Icon variant={iconVariant} />
-                    <div className="flex flex-col">
-                        <div className="text-neutral-black font-bold font-['Albert Sans'] leading-normal tracking-tight text-sm md:text-base lg:text-lg">
+                <div className="flex flex-col items-start w-full">
+                    <div className="flex items-center gap-2 mb-1">
+                        <Icon variant={iconVariant} />
+                        <div className="text-neutral-black font-bold font-['Albert Sans'] leading-tight tracking-tight text-sm">
                             {title}
                         </div>
-                        <div className="text-neutral-black font-normal font-['Albert Sans'] leading-normal tracking-tight text-sm md:text-base lg:text-lg break-words">
-                            {description}
-                        </div>
+                    </div>
+                    <div className="text-neutral-black font-normal font-['Albert Sans'] text-xs leading-normal tracking-tight">
+                        {description}
                     </div>
                 </div>
             ) : (
