@@ -1,20 +1,38 @@
 import Icon, { IconProps } from "../Icon/Icon.tsx";
-import React from "react";
+import { cva } from "class-variance-authority";
+
+const notificationVariant = cva(
+    "w-[393px] h-[78px] rounded-[20px] border flex items-center px-4 gap-3",
+    {
+        variants: {
+            variant: {
+                default: "border-primary-300",
+                extended: "h-[307px] border-primary-300 rounded-[25px]",
+            },
+        },
+        defaultVariants: {
+            variant: "default",
+        },
+    }
+);
 
 interface NotificationProps {
-    iconVariant: IconProps['notificatoins'];
+    variant: "default" | "extended";
+    iconVariant: IconProps["variant"];
     title: string;
     description: string;
 }
 
-export const Notification = ({ iconVariant, title, description }: NotificationProps) => {
+export const Notification = ({ variant, iconVariant, title, description }: NotificationProps) => {
     return (
-        <div className="w-[365px] h-[78px]  rounded-[20px] border border-primary-300 flex items-center px-4 gap-3">
-            <Icon variant={iconVariant}/>
+        <div className={notificationVariant({ variant })}>
+            <Icon variant={iconVariant} />
             <div className="flex flex-col">
-                <div className="text-neutral-black text-base font-bold font-['Albert Sans'] leading-normal tracking-tight">
-                    {title}
-                </div>
+                {variant !== "extended" && (
+                    <div className="text-neutral-black text-base font-bold font-['Albert Sans'] leading-normal tracking-tight">
+                        {title}
+                    </div>
+                )}
                 <div className="text-neutral-black text-base font-normal font-['Albert Sans'] leading-normal tracking-tight">
                     {description}
                 </div>
@@ -22,3 +40,4 @@ export const Notification = ({ iconVariant, title, description }: NotificationPr
         </div>
     );
 };
+export default Notification;
