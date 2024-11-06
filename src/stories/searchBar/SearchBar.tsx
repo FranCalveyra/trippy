@@ -11,7 +11,7 @@ export const SearchBar = ({ placeholder, imageUrl}: SearchBarProps) => {
             <input
                 type="text"
                 placeholder={placeholder}
-                className="text-neutral-black font-normal text-body bg-transparent focus:outline-none flex-grow bg-primary-200"
+                className="text-neutral-black font-normal text-body bg-transparent focus:outline-none flex-grow bg-primary-200 px-3"
             />
 
             <img className="w-[52px] h-[52px] rounded-full ml-auto" src={imageUrl} alt="User avatar"/>
