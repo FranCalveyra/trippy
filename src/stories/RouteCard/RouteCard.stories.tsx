@@ -5,24 +5,19 @@ const meta: Meta<typeof RouteCard> ={
     title:'Components/RouteCard',
     component: RouteCard,
     tags: ['autodocs'],
-}
+} satisfies Meta<typeof RouteCard>;
 
 export default meta
-
-type Story = StoryObj<typeof RouteCard>
+type Story = StoryObj<typeof meta>
 
 export const Single: Story = {
     name:'Single',
-    render: () => {
-        return (
-            <RouteCard
-                roadItemPropsArray={[
-                    {iconVariant: 'bus', text: '200'},
-                ]}
-                time={"40 min"}
-                money={"$500"}
-            />
-        );
+    args: {
+        roadItemPropsArray: [
+            {iconVariant: 'bus', text: '200'}
+        ],
+        time: "40 min",
+        money: "$500"
     }
 }
 
