@@ -2,7 +2,7 @@ import {Meta, StoryObj} from "@storybook/react";
 import RouteCard from "./RouteCard.tsx";
 
 const meta: Meta<typeof RouteCard> ={
-    title:'Components/RouteCard',
+    title:'Organisms/RouteCard',
     component: RouteCard,
     tags: ['autodocs'],
 } satisfies Meta<typeof RouteCard>;
