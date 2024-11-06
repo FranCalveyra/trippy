@@ -8,7 +8,8 @@ export default {
     extend: {
       borderRadius: {
         'button': '32px',
-        'modal': '20px'
+        'modal': '20px',
+        'route': '8px'
       }
     },
     colors:{
