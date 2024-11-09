@@ -5,18 +5,6 @@ const meta: Meta<typeof IconButton> ={
     title:'Molecules/IconButton',
     component:IconButton,
     tags: ['autodocs'],
-    // argTypes:{
-    //     variant:{
-    //         options:['fulfilled','outlined','ghost','white'],
-    //         control:{type:'select'},
-    //         defaultValue:'fulfilled'
-    //     },
-    //     size:{
-    //         options:['small','medium','large'],
-    //         control:{type:'select'},
-    //         defaultValue:'medium'
-    //     }
-    // }
 }
 
 export default meta

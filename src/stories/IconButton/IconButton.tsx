@@ -1,6 +1,6 @@
-import React, {ReactNode,ButtonHTMLAttributes} from 'react'
-import {cva, VariantProps} from "class-variance-authority";
-import Icon, {IconProps} from "../Icon/Icon.tsx";
+import { ButtonHTMLAttributes } from 'react'
+import { cva, VariantProps } from "class-variance-authority";
+import Icon, { IconProps } from "../Icon/Icon.tsx";
 
 
 const buttonVariant = cva(['rounded-lg', 'px-6 py-4'],{
