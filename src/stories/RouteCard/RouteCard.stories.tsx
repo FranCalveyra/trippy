@@ -71,3 +71,22 @@ export const Quadruple: Story = {
         );
     }
 }
+
+export const Quintuple: Story = {
+    name:'Quintuple',
+    render: () => {
+        return (
+            <RouteCard
+                roadItemPropsArray={[
+                    {variant: 'walk'},
+                    {variant: 'bus', text: '200'},
+                    {variant: 'bus', text: '300'},
+                    {variant: 'bus', text: '400'},
+                    {variant: 'walk'},
+                ]}
+                time={"40 min"}
+                money={"$500"}
+            />
+        );
+    }
+}

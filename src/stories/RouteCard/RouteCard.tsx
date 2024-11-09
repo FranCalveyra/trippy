@@ -14,12 +14,17 @@ const RouteCard = ({roadItemPropsArray, time, money}: RouteCardProps) => {
     }
 
     return (
-        <div className={"h-24 w-96 p-8 bg-white flex flex-col items-stretch justify-center gap-2"}>
-            <div className={"flex flex-row gap-1"}>
+        <div className={"h-24 w-96 p-8 bg-white flex flex-col items-stretch justify-center gap-4"}>
+            <div className={"flex flex-row gap-1 overflow-x-auto overflow-y-hidden shrink-0 no-scrollbar"}>
                 {roadItemPropsArray.map((props, idx) => (
                     <>
-                        <RoadItem key={`Road Item ${crypto.randomUUID()}`} {...props}/>
-                        {notLastOne(idx) && <Icon variant={'arrow'} color={tailwindConfig.theme.colors.primary["700"]}/>}
+                        {/*<div className={"shrink-0"}>*/}
+                            <RoadItem key={`Road Item ${crypto.randomUUID()}`} {...props}/>
+                        {/*</div>*/}
+                        <div className={"shrink-0"}>
+                            {notLastOne(idx) &&
+                                <Icon variant={'arrow'} color={tailwindConfig.theme.colors.primary["700"]}/>}
+                        </div>
                     </>
                 ))}
             </div>
