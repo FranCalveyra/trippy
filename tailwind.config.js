@@ -8,24 +8,27 @@ export default {
     extend: {
       borderRadius: {
         'button': '32px',
-        'modal': '20px'
+        'modal': '20px',
+        'route': '8px'
       }
     },
     colors:{
       primary:{
+        100: '#B6E1E2',
+        200: '#80C9CB',
+        300: '#4DB3B6',
+        400: '#1A9DA1',
+        500: '#019296',
+        600: '#018387',
+        700: '#003A3C',
+      },
+      secondary:{
         200: '#DADDFC',
         300: '#AAB2F8',
         400: '#7888F5',
         500: '#3A5EEF',
         600: '#1C3EB1',
         700: '#0D236C',
-      },
-      secondary:{
-        300: '#4DB3B6',
-        400: '#1A9DA1',
-        500: '#019296',
-        600: '#018387',
-        700: '#003A3C',
       },
       status:{
         success: '#83C45B',
