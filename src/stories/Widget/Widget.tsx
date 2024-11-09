@@ -1,6 +1,9 @@
-interface WidgetProps{ imagePath: string, widgetTitle: string }
+interface WidgetProps {
+    imagePath: string,
+    widgetTitle: string
+}
 
-export const Widget = ({imagePath, widgetTitle="Current Location"}:WidgetProps) => {
+export const Widget = ({ imagePath, widgetTitle = "Current Location" }: WidgetProps) => {
     return (
         <div className="w-full h-full bg-white">
             <div className="w-[261px] h-[165px] absolute top-0 left-0 bg-primary-100 rounded-lg"/>
