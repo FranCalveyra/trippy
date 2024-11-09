@@ -13,11 +13,11 @@ type Story = StoryObj<typeof RoadItem>
 
 export const Default: Story = {
     name:'Default',
-    render: () => <RoadItem iconVariant={'bus'} text={"200"}/>
+    render: () => <RoadItem variant={'bus'} text={"200"}/>
 }
 
 export const Walking: Story = {
     name:'Walking',
-    render: () => <RoadItem iconVariant={'walk'}/>
+    render: () => <RoadItem variant={'walk'}/>
 }
 

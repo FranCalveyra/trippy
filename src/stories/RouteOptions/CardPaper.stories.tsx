@@ -1,30 +1,27 @@
 import {Meta, StoryObj} from "@storybook/react";
-import RouteCard from "./RouteCard.tsx";
+import CardPaper from "./CardPaper.tsx";
+import RouteCard from "../RouteCard/RouteCard.tsx";
 
-const meta: Meta<typeof RouteCard> ={
-    title:'Organisms/RouteCard',
-    component: RouteCard,
+const meta: Meta<typeof CardPaper> ={
+    title:'Organisms/CardPaper',
+    component: CardPaper,
     tags: ['autodocs'],
-} satisfies Meta<typeof RouteCard>;
+} satisfies Meta<typeof CardPaper>;
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Single: Story = {
-    name:'Single',
-    args: {
-        roadItemPropsArray: [
-            {variant: 'bus', text: '200'}
-        ],
-        time: "40 min",
-        money: "$500"
-    }
-}
-
-export const Double: Story = {
-    name:'Double',
-    render: () => {
-        return (
+export const RouteOptions: Story = {
+    name:'RouteOptions',
+    render: () => (
+        <CardPaper text={"Route Options"}>
+            <RouteCard
+                roadItemPropsArray={[
+                    {variant: 'bus', text: '200'},
+                ]}
+                time={"40 min"}
+                money={"$500"}
+            />
             <RouteCard
                 roadItemPropsArray={[
                     {variant: 'bus', text: '200'},
@@ -33,14 +30,6 @@ export const Double: Story = {
                 time={"40 min"}
                 money={"$500"}
             />
-        );
-    }
-}
-
-export const Triple: Story = {
-    name:'Triple',
-    render: () => {
-        return (
             <RouteCard
                 roadItemPropsArray={[
                     {variant: 'bus', text: '200'},
@@ -50,24 +39,16 @@ export const Triple: Story = {
                 time={"40 min"}
                 money={"$500"}
             />
-        );
-    }
+        </CardPaper>
+    )
 }
 
-export const Quadruple: Story = {
-    name:'Quadruple',
-    render: () => {
-        return (
-            <RouteCard
-                roadItemPropsArray={[
-                    {variant: 'bus', text: '200'},
-                    {variant: 'bus', text: '300'},
-                    {variant: 'bus', text: '400'},
-                    {variant: 'walk'},
-                ]}
-                time={"40 min"}
-                money={"$500"}
-            />
-        );
-    }
+export const RecentPlaces: Story = {
+    name:'RecentPlaces',
+    render: () => (
+        <CardPaper text={"Route Options"}>
+            <div>TODO:</div>
+            <div>RecentPlaces</div>
+        </CardPaper>
+    )
 }
