@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export interface IconProps {
     variant: 'groups' | 'notifications' | 'bus' | 'walk' | 'arrow',
