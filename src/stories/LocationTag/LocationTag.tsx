@@ -1,13 +1,31 @@
 import tailwindConfig from "../../../tailwind.config.js"
+import {cva} from "class-variance-authority";
 
 interface LocationTagProps {
     locationName: string;
     locationAddress: string;
+    variant?: "plain" | "floating"
 }
 
-export const LocationTag = ({ locationName = "", locationAddress = "" }: LocationTagProps) => {
+const locationTagVariant = cva(["h-24 flex items-center gap-3 p-4 bg-white"],{
+    variants:{
+        variant:{
+            plain:[
+                ''
+            ],
+            floating:[
+                'shadow rounded-modal'
+            ],
+        },
+    },
+    defaultVariants:{
+        variant:'plain',
+    }
+})
+
+export const LocationTag = ({ locationName = "", locationAddress = "", variant = "plain" }: LocationTagProps) => {
     return (
-        <div className="h-24 flex items-center gap-3 p-4 bg-white">
+        <div className={locationTagVariant({variant})}>
             {/* Icon with colored background */}
             <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill={tailwindConfig.theme.colors.primary["700"]} viewBox="0 0 395.71 395.71" className="w-5 h-5">

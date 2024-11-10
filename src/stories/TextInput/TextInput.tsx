@@ -6,11 +6,9 @@ export interface TextInputProps {
   label: string;
   /** What to show when no text is input */
   placeholder?: string;
-  /** The text being input */
-  value?: string;
 }
 
-/** Primary UI component for user interaction */
+
 export const TextInput = ({
   label,
   placeholder = "",
