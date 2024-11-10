@@ -38,8 +38,16 @@ export const Notification = ({ variant, iconVariant, title, description }: Notif
                         {title}
                     </div>
 
-                    <div className={`${variant === "warning" ? "self-stretch text-primary-700 text-base font-normal leading-normal tracking-tight"
-                        : "max-w-[393px] text-primary-700 font-normal text-sm leading-tight truncate overflow-hidden whitespace-nowrap text-ellipsis"}`}>
+                    <div className={`${variant === "warning" ? "self-stretch text-primary-700 text-base font-normal leading-normal tracking-tight overflow-hidden"
+                        : "max-w-[393px] text-primary-700 font-normal text-sm leading-tight"}`}
+                         style={{
+                             display: "webkit-box",
+                             WebkitBoxOrient: "vertical",
+                             WebkitLineClamp: 3,
+                             overflow: "hidden",
+                             textOverflow: "ellipsis",
+                             whiteSpace: "normal",
+                         }}>
                         {description}
                     </div>
                 </div>
