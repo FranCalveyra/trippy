@@ -1,14 +1,34 @@
+import tailwindConfig from "../../../tailwind.config.js"
+import {cva} from "class-variance-authority";
+
 interface LocationTagProps {
     locationName: string;
     locationAddress: string;
+    variant?: "plain" | "floating"
 }
 
-export const LocationTag = ({ locationName = "", locationAddress = "" }: LocationTagProps) => {
+const locationTagVariant = cva(["h-24 flex items-center gap-3 p-4 bg-white"],{
+    variants:{
+        variant:{
+            plain:[
+                ''
+            ],
+            floating:[
+                'shadow rounded-modal'
+            ],
+        },
+    },
+    defaultVariants:{
+        variant:'plain',
+    }
+})
+
+export const LocationTag = ({ locationName = "", locationAddress = "", variant = "plain" }: LocationTagProps) => {
     return (
-        <div className="w-80 h-20 flex items-center gap-3 p-4 bg-neutral-white shadow-md">
+        <div className={locationTagVariant({variant})}>
             {/* Icon with colored background */}
-            <div className="w-10 h-10 bg-primary-200 rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#333" viewBox="0 0 395.71 395.71" className="w-5 h-5">
+            <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill={tailwindConfig.theme.colors.primary["700"]} viewBox="0 0 395.71 395.71" className="w-5 h-5">
                     <g>
                         <path
                             d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,
@@ -21,14 +41,15 @@ export const LocationTag = ({ locationName = "", locationAddress = "" }: Locatio
                     </g>
                 </svg>
             </div>
-            <div className="flex flex-col justify-center">
-                <div className="text-neutral-900 font-bold text-sm">
+            <div className="flex flex-col justify-center overflow-hidden">
+                <div className="text-primary-700 font-bold whitespace-nowrap overflow-hidden text-ellipsis">
                     {locationName}
                 </div>
-                <div className="text-neutral-600 font-normal text-sm">
+                <div className="text-primary-700 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
                     {locationAddress}
                 </div>
             </div>
+
         </div>
     );
 };
