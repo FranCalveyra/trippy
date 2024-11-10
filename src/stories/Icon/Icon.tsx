@@ -1,7 +1,7 @@
 
 
 export interface IconProps {
-    variant: 'groups' | 'notifications' | 'bus' | 'walk' | 'arrow',
+    variant: 'groups' | 'notifications' | 'bus' | 'walk' | 'arrow' | 'warningNotification' | 'warning';
     color: string
 }
 
@@ -55,6 +55,27 @@ const Icon = ({variant, color}: IconProps) => {
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M15.3891 13.071L9.73212 18.728L8.31812 17.314L13.2681 12.364L8.31812 7.414L9.73212 6L15.3891 11.657C15.5766 11.8445 15.6819 12.0988 15.6819 12.364C15.6819 12.6292 15.5766 12.8835 15.3891 13.071Z"
                           fill={color}/>
+                </svg>
+            )
+        case "warningNotification":
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#00233e"
+                     stroke="#00233e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+                     className="lucide lucide-circle-alert">
+                    <circle cx="12" cy="12" r="10" fill="#00233e"/>
+                    <line x1="12" y1="8" x2="12" y2="12" stroke="white" strokeWidth="2"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16" stroke="white" strokeWidth="2"/>
+                </svg>
+
+            )
+        case "warning":
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                     className="lucide lucide-triangle-alert">
+                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
+                    <path d="M12 9v4"/>
+                    <path d="M12 17h.01"/>
                 </svg>
             )
     }

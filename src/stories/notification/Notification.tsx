@@ -26,31 +26,19 @@ interface NotificationProps {
 export const Notification = ({ variant, iconVariant, title, description }: NotificationProps) => {
     return (
         <div className={notificationVariant({ variant })}>
-            {variant === "warning" ? (
-                <div className="flex flex-col items-start w-full">
-                    <div className="flex items-center gap-2 mb-1">
-                        <Icon variant={iconVariant} />
-                        <div className="text-neutral-black font-bold font-['Albert Sans'] leading-tight tracking-tight text-sm">
-                            {title}
-                        </div>
+            <div className="flex items-start gap-3 w-full">
+                <div className="flex items-center justify-center w-8 h-8 bg-[#daddfc] rounded-full">
+                    <Icon variant={iconVariant} color="s" />
+                </div>
+                <div className="flex flex-col">
+                    <div className="text-[#003a3c] font-bold text-base leading-tight font-['Albert Sans']">
+                        {title}
                     </div>
-                    <div className="text-neutral-black font-normal font-['Albert Sans'] text-xs leading-normal tracking-tight">
+                    <div className="text-[#003a3c] font-normal text-sm leading-tight font-['Roboto']">
                         {description}
                     </div>
                 </div>
-            ) : (
-                <>
-                    <Icon variant={iconVariant} />
-                    <div className="flex flex-col w-full">
-                        <div className="text-neutral-black font-bold font-['Albert Sans'] leading-normal tracking-tight text-sm md:text-base lg:text-lg">
-                            {title}
-                        </div>
-                        <div className="text-neutral-black font-normal font-['Albert Sans'] leading-normal tracking-tight text-sm md:text-base lg:text-lg break-words">
-                            {description}
-                        </div>
-                    </div>
-                </>
-            )}
+            </div>
         </div>
     );
 };
