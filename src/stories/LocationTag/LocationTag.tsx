@@ -5,7 +5,7 @@ interface LocationTagProps {
 
 export const LocationTag = ({ locationName = "", locationAddress = "" }: LocationTagProps) => {
     return (
-        <div className="w-80 h-20 flex items-center gap-3 p-4 bg-white shadow-md">
+        <div className="w-80 h-20 flex items-center gap-3 p-4 bg-neutral-white shadow-md">
             {/* Icon with colored background */}
             <div className="w-10 h-10 bg-primary-200 rounded-full flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#333" viewBox="0 0 395.71 395.71" className="w-5 h-5">

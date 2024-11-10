@@ -14,7 +14,7 @@ const RouteCard = ({roadItemPropsArray, time, money}: RouteCardProps) => {
     }
 
     return (
-        <div className={"h-24 w-96 p-8 bg-white flex flex-col items-stretch justify-center gap-2"}>
+        <div className={"h-24 w-96 p-8 bg-neutral-white flex flex-col items-stretch justify-center gap-2"}>
             <div className={"flex flex-row gap-1"}>
                 {roadItemPropsArray.map((props, idx) => (
                     <>

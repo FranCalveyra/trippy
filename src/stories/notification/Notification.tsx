@@ -26,7 +26,7 @@ interface NotificationProps {
 export const Notification = ({ variant, iconVariant, title, description }: NotificationProps) => {
     return (
         <div className={notificationVariant({ variant })}>
-            <div className={`flex ${variant === "warning" ? "px-3 py-6 bg-white rounded-[13px] justify-start items-start gap-2 inline-flex"
+            <div className={`flex ${variant === "warning" ? "px-3 py-6 bg-neutral-white rounded-[13px] justify-start items-start gap-2 inline-flex"
                 : "items-start gap-3 w-full"}`}>
                 <div className={`${variant === "warning" ? "w-[38.77px] h-[41.23px] relative bg-status-warning/50 rounded-[99px] flex items-center justify-center"
                     : "flex items-center justify-center w-8 h-8 bg-secondary-200 rounded-full"}`}>
