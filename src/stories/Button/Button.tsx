@@ -7,13 +7,13 @@ const buttonVariant = cva(['rounded-button'],{
         variant:{
             //TODO: how to specify color, considering 'hover' and 'disabled' should be tweaked?
             fulfilled:[
-                'bg-primary-300 text-white',
-                'hover:bg-primary-500 hover:text-white',
+                'bg-primary-300 text-neutral-white',
+                'hover:bg-primary-500 hover:text-neutral-white',
                 'disabled:bg-grey-300 disabled:text-grey-700',
             ],
             outlined:[
-                'bg-white text-primary-300 border border-primary-300',
-                'hover:bg-primary-300 hover:text-white',
+                'bg-neutral-white text-primary-300 border border-primary-300',
+                'hover:bg-primary-300 hover:text-neutral-white',
                 'disabled:bg-grey-300 disabled:border-grey-300 disabled:text-grey-700',
             ],
         },
