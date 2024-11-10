@@ -1,21 +1,20 @@
 import {Meta, StoryObj} from "@storybook/react";
-import CardPaper from "./CardPaper.tsx";
+import RouteOptions from "./RouteOptions.tsx";
 import RouteCard from "../RouteCard/RouteCard.tsx";
-import {LocationTag} from "../LocationTag/LocationTag.tsx";
 
-const meta: Meta<typeof CardPaper> ={
-    title:'Organisms/CardPaper',
-    component: CardPaper,
+const meta: Meta<typeof RouteOptions> ={
+    title:'Frames/RouteOptions',
+    component: RouteOptions,
     tags: ['autodocs'],
-} satisfies Meta<typeof CardPaper>;
+} satisfies Meta<typeof RouteOptions>;
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const RouteOptions: Story = {
-    name:'RouteOptions',
+export const Default: Story = {
+    name:'Default',
     render: () => (
-        <CardPaper text={"Route Options"}>
+        <RouteOptions>
             <RouteCard
                 roadItemPropsArray={[
                     {variant: 'bus', text: '200'},
@@ -42,23 +41,6 @@ export const RouteOptions: Story = {
                 time={"50 min"}
                 money={"$600"}
             />
-        </CardPaper>
-    )
-}
-
-export const RecentPlaces: Story = {
-    name:'RecentPlaces',
-    render: () => (
-        <CardPaper text={"Recent Places"}>
-            <LocationTag
-                locationName={"Times Square"}
-                locationAddress={"1560 Broadway, New York, NY 10036, United States"}></LocationTag>
-            <LocationTag
-                locationName={"Statue of Liberty"}
-                locationAddress={"Liberty Island, New York, NY"}></LocationTag>
-            <LocationTag
-                locationName={"Eiffel Tower"}
-                locationAddress={"Champ de Mars, 5 Avenue Anatole France, Paris, Île-de-France"}></LocationTag>
-        </CardPaper>
+        </RouteOptions>
     )
 }
