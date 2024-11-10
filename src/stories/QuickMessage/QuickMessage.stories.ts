@@ -1,22 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {TextInput} from "./TextInput.tsx";
+import {QuickMessage} from "./QuickMessage.tsx";
+
 
 const meta = {
-  title: 'Organisms/TextInput',
-  component: TextInput,
+  title: 'Atoms/QuickMessage',
+  component: QuickMessage,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof TextInput>;
+} satisfies Meta<typeof QuickMessage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+
 export const Default: Story = {
   args: {
-    label: "Some text",
-    placeholder: "Write something",
-    value: ""
+    value: "Button"
   },
 };

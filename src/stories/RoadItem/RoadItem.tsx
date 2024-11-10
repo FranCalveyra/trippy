@@ -11,7 +11,7 @@ const roadItemVariant = cva(["flex flex-row justify-center items-center rounded-
     variants:{
         variant:{
             bus:[
-                'bg-primary-200', 'text-primary-700', 'fill-primary-700'
+                'bg-primary-100', 'text-primary-700', 'fill-primary-700'
             ],
             walk:[
                 'bg-secondary-300', 'text-secondary-700', 'fill-secondary-700'

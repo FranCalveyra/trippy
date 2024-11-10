@@ -14,7 +14,7 @@ export default {
     },
     colors:{
       primary:{
-        100: '#B6E1E2',
+        100: '#BDE5E7',
         200: '#80C9CB',
         300: '#4DB3B6',
         400: '#1A9DA1',
@@ -60,6 +60,22 @@ export default {
       'sans': 'Albert Sans'
     }
   },
-  plugins: [],
+  plugins: [
+    function ({addUtilities}) {
+      const newUtilities = {
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        ".no-scrollbar::-webkit-scrollbar": {
+          display: "none"
+        },
+        /* Hide scrollbar for IE, Edge and Firefox */
+        ".no-scrollbar": {
+          "-ms-overflow-style": "none",  /* IE and Edge */
+          "scrollbar-width": "none"  /* Firefox */
+        }
+      };
+
+      addUtilities(newUtilities)
+    }
+  ],
 }
 

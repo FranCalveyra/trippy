@@ -1,3 +1,4 @@
+import {useState} from "react";
 
 
 export interface TextInputProps {
@@ -5,20 +6,29 @@ export interface TextInputProps {
   label: string;
   /** What to show when no text is input */
   placeholder?: string;
-  /** The text being input */
-  value?: string;
 }
 
-/** Primary UI component for user interaction */
+
 export const TextInput = ({
   label,
   placeholder = "",
-  value = ""
 }: TextInputProps) => { //TODO: use InputHTMLAttributes<TextInputProps> for props
-  return (
+    const [value, setValue] = useState("")
+
+    function onTextChange(event) {
+        setValue(event.target.value)
+    }
+
+    return (
       <div className={"relative"}>
-          <label htmlFor={"text"} className={"absolute rounded-2xl -top-3 left-5 bg-primary-300 px-4 font-bold text-primary-700"}>{label}</label>
-          <input id={"text"} className={"peer rounded-2xl h-16 w-96 border text-body pl-8"} placeholder={placeholder} value={value}/>
+          <label htmlFor={"text"} className={"absolute rounded-2xl -top-3 left-5 bg-primary-100 px-4 font-bold text-primary-700"}>{label}</label>
+          <input
+              id={"text"}
+              className={"peer rounded-2xl h-16 w-96 bg-neutral-200 text-body pl-8 focus:outline-primary-100"}
+              placeholder={placeholder}
+              value={value}
+              onChange={onTextChange}
+          />
       </div>
   );
 };
