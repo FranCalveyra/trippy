@@ -1,7 +1,8 @@
 
 
 export interface IconProps {
-    variant: 'groups' | 'notifications' | 'bus' | 'walk' | 'arrow' | 'warningNotification' | 'warning';
+    variant: 'groups' | 'notifications' | 'bus' | 'walk' | 'arrow' |
+        'warningNotification' | 'warning' | 'arrowBack';
     color: string
 }
 
@@ -77,6 +78,15 @@ const Icon = ({variant, color}: IconProps) => {
                     <path d="M12 9v4"/>
                     <path d="M12 17h.01"/>
                 </svg>
+            )
+        case 'arrowBack':
+            return (
+                <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.5841 21.6079L21.5894 30.6133L19.2979 32.8646L6.43311 19.9998L19.2979 7.13501L21.5894 9.38635L12.5841 18.3917H32.1627V21.6079H12.5841Z"
+                        fill={color}/>
+                </svg>
+
             )
     }
 }
