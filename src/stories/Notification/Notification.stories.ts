@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const base: Story = {
     args: {
-        variant: 'default',
+        variant: "default",
         iconVariant: 'warningNotification',
         title: "Stroke in Av. Cordoba",
         description: "There is a stroke in Av. Cordoba",
