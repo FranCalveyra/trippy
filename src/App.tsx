@@ -1,8 +1,8 @@
 import './App.css'
-import {RouteSelection} from "./stories/RouteSelection/RouteSelection.tsx";
+import {RouteSelectionPage} from "./stories/RouteSelection/RouteSelectionPage.tsx";
 
 function App() {
-    return <RouteSelection/>
+    return <RouteSelectionPage/>
 }
 
 export default App

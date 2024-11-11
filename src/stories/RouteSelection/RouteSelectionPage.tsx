@@ -8,7 +8,7 @@ import Icon from "../Icon/Icon.tsx";
 import ProfilePicture from "../ProfilePicture/ProfilePicture.tsx";
 import tailwindConfig from "../../../tailwind.config.js"
 
-export const RouteSelection: React.FC = () => {
+export const RouteSelectionPage: React.FC = () => {
     return (
         <div className={"flex flex-col min-h-screen w-screen bg-cover bg-no-repeat pt-4 overflow-hidden"} style={{ backgroundImage: `url(${mapImage})` }}>
             <div className={"flex flex-row w-100 justify-between mx-4"}>
@@ -21,7 +21,7 @@ export const RouteSelection: React.FC = () => {
             </div>
             {/*<div*/}
             {/*    className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 bg-neutral-white shadow-lg rounded-t-2xl">*/}
-            <div className={"-mb-40"}>
+            <div className={"-mb-32"}>
                 <RouteOptions>
                     <RouteCard
                         roadItemPropsArray={[
@@ -32,6 +32,7 @@ export const RouteSelection: React.FC = () => {
                     />
                     <RouteCard
                         roadItemPropsArray={[
+                            {variant: 'bus', text: '200'},
                             {variant: 'bus', text: '300'},
                             {variant: 'walk'},
                         ]}
