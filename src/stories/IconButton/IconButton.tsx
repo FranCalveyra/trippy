@@ -7,13 +7,13 @@ const buttonVariant = cva(['rounded-lg', 'px-6 py-4'],{
     variants:{
         variant:{
             primary:[
-                'bg-primary-300 text-white',
-                'hover:bg-primary-500 hover:text-white',
+                'bg-primary-300 text-neutral-white',
+                'hover:bg-primary-500 hover:text-neutral-white',
                 'disabled:bg-grey-100 disabled:text-grey-700',
             ],
             secondary:[
-                'bg-secondary-300 text-white',
-                'hover:bg-secondary-500 hover:text-white',
+                'bg-secondary-300 text-neutral-white',
+                'hover:bg-secondary-500 hover:text-neutral-white',
                 'disabled:bg-grey-100 disabled:text-grey-700',
             ],
         },
@@ -32,7 +32,7 @@ const IconButton = ({variant, iconVariant, value, ...rest}: IconButtonProps) => 
     return (
         <button className={buttonVariant({variant})} {...rest}>
             <div className={'flex justify-center items-center'}>
-                <Icon variant={iconVariant}/>
+                <Icon variant={iconVariant} color=""/>
                 <div className={'text-justify ml-3'}>{value}</div>
             </div>
         </button>

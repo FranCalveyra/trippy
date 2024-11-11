@@ -21,14 +21,19 @@ export default {
         500: '#019296',
         600: '#018387',
         700: '#003A3C',
+        800: '#002C2D',
+        900: '#001D1E'
       },
       secondary:{
+        100: '#EBF4FF',
         200: '#DADDFC',
         300: '#AAB2F8',
         400: '#7888F5',
         500: '#3A5EEF',
         600: '#1C3EB1',
         700: '#0D236C',
+        800: '#030D35',
+        900: '#030D35'
       },
       status:{
         success: '#83C45B',
@@ -46,9 +51,8 @@ export default {
         300: '#DEE2E6',
         200: '#E9ECEF',
         100: '#F8F9FA',
-
+        white: '#FFFFFF'
       },
-      white: '#FFFFFF'
     },
     fontSize:{
       'h1': ['48px', '140%'],
