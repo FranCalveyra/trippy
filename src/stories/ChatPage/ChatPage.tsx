@@ -1,5 +1,5 @@
 import React from "react";
-import profile from '../../assets/profile.jfif';
+import dad from '../../assets/dad.png';
 import Icon from "../Icon/Icon.tsx";
 import ProfilePicture from "../ProfilePicture/ProfilePicture.tsx";
 import { MessageBubble } from "../MessageBubble/MessageBubble.tsx";
@@ -17,9 +17,9 @@ export const ChatPage: React.FC = () => {
     return (
         <div className="flex flex-col h-screen w-screen bg-white pt-4 px-4 overflow-hidden">
 
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 gap-4">
                 <Icon variant="arrowBack" color={tailwindConfig.theme.colors.primary["700"]}/>
-                <ProfilePicture imageUrl={profile}/>
+                <ProfilePicture imageUrl={dad}/>
                 <span className="text-primary-700 text-lg text-h3">Dad</span>
             </div>
 
@@ -40,13 +40,16 @@ export const ChatPage: React.FC = () => {
                                    variant={"outgoing"}/>
                 </div>
             </div>
-            <div>
-                <div className="flex justify-end mb-4"><IconButton variant="secondary" iconVariant={"list"} value="Widget"/>
-                </div>
-                <div className="flex justify-around mb-4 gap-2">
-                    <QuickMessage value="Arriving"/>
-                    <QuickMessage value="Ok"/>
-                    <QuickMessage value="Call you back"/>
+            <div className="mb-4">
+                <div className="flex flex-col gap-2 mb-4">
+                    <div className="flex justify-end mb-2">
+                        <IconButton variant="secondary" iconVariant={"list"} value="Widget"/>
+                    </div>
+                    <div className="flex justify-around gap-2">
+                        <QuickMessage value="Arriving"/>
+                        <QuickMessage value="Ok"/>
+                        <QuickMessage value="Call you back"/>
+                    </div>
                 </div>
 
                 <div className="flex items-center">

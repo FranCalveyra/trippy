@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import Icon, { IconProps } from "../Icon/Icon.tsx";
 
 
-const buttonVariant = cva(['rounded-lg', 'px-6 py-4'],{
+const buttonVariant = cva(['rounded-lg', 'px-5 py-4'],{
     variants:{
         variant:{
             primary:[
