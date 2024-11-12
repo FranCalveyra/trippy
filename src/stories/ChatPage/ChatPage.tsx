@@ -40,7 +40,7 @@ export const ChatPage: React.FC = () => {
 
             <div>
                 <div className="flex justify-end">
-                    <IconButton variant="secondary" iconVariant={"groups"} value="Widget"/>
+                    <IconButton variant="secondary" iconVariant={"list"} value="Widget"/>
                 </div>
 
                 <div className="flex justify-around mb-4">
