@@ -33,8 +33,6 @@ export const ContactCard = ({ name, message, imageUrl }: ContactCardProps) => {
                 <div className="text-[#075e54] font-bold text-base">{name}</div>
                 <div className="text-[#4a4a4a] font-normal text-sm">{message}</div>
             </div>
-
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[90%] border-b border-black-800" />
         </div>
     );
 };
