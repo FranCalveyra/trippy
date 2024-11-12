@@ -5,6 +5,9 @@ const meta: Meta<typeof IconButton> ={
     title:'Molecules/IconButton',
     component:IconButton,
     tags: ['autodocs'],
+    args:{
+        iconVariant:'list'
+    }
 }
 
 export default meta
