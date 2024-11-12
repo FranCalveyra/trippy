@@ -12,7 +12,7 @@ const buttonVariant = cva(['rounded-lg', 'px-6 py-4'],{
                 'disabled:bg-grey-100 disabled:text-grey-700',
             ],
             secondary:[
-                'bg-secondary-300 text-neutral-white',
+                'bg-secondary-300 text-primary-800',
                 'hover:bg-secondary-500 hover:text-neutral-white',
                 'disabled:bg-grey-100 disabled:text-grey-700',
             ],

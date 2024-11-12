@@ -40,7 +40,6 @@ export const ChatPage: React.FC = () => {
                                    variant={"outgoing"}/>
                 </div>
             </div>
-            {/*todo, change "Widget" color*/}
             <div>
                 <div className="flex justify-end mb-4"><IconButton variant="secondary" iconVariant={"list"} value="Widget"/>
                 </div>
