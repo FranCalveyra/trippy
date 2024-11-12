@@ -6,32 +6,30 @@ const notificationVariant = cva(
     {
         variants: {
             variant: {
-                default: "w-full max-w-[393px] h-auto items-center ml-7 mr-7 mt-18px mb-18px",
+                warning: "h-[150px] px-2 py-6 bg-neutral-white rounded-[13px] justify-start items-start gap-2 inline-flex",
             },
         },
         defaultVariants: {
-            variant: "default",
+            variant: "warning",
         },
     }
 );
 
-
-interface NotificationDefaultProps {
+interface NotificationWarningProps {
     iconVariant: IconProps["variant"];
     title: string;
     description: string;
 }
 
-
-export const Notification = ({ iconVariant, title, description }: NotificationDefaultProps) => {
+export const NotificationWarning = ({ iconVariant, title, description }: NotificationWarningProps) => {
     return (
-        <div className={notificationVariant({ variant: "default" })}>
-            <div className="flex items-start gap-[22.5px] w-full">
-                <div className="flex items-center justify-center w-8 h-8 bg-secondary-200 rounded-full">
+        <div className={notificationVariant({ variant: "warning" })}>
+            <div className="flex justify-start items-start gap-2 inline-flex w-full">
+                <div className="w-[38.77px] h-[41.23px] rounded-full flex items-center justify-center">
                     <Icon variant={iconVariant} color="" />
                 </div>
-                <div className="flex flex-col">
-                    <div className="max-w-[320px] text-primary-700 font-bold text-base leading-tight"
+                <div className="flex flex-col justify-start items-start w-64 gap-2">
+                    <div className="self-stretch h-[22px] text-primary-700 text-base font-bold leading-normal tracking-tight"
                          style={{
                              whiteSpace: "nowrap",
                              overflow: "hidden",
@@ -40,15 +38,13 @@ export const Notification = ({ iconVariant, title, description }: NotificationDe
                          }}>
                         {title}
                     </div>
-                  
-                    <div className="max-w-[320px] text-primary-700 font-normal text-sm leading-tight"
+                    <div className="self-stretch text-primary-700 text-base font-normal leading-normal tracking-tight overflow-hidden"
                          style={{
-                             display: "webkit-box",
-                             WebkitBoxOrient: "vertical",
-                             WebkitLineClamp: 1,
+                             display: "block",
+                             WebkitLineClamp: 3,
                              overflow: "hidden",
                              textOverflow: "ellipsis",
-                             whiteSpace: "nowrap",
+                             whiteSpace: "unset",
                              width: "100%",
                          }}>
                         {description}
@@ -59,4 +55,4 @@ export const Notification = ({ iconVariant, title, description }: NotificationDe
     );
 };
 
-export default Notification;
+export default NotificationWarning;

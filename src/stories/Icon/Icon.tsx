@@ -63,7 +63,7 @@ const Icon = ({variant, color}: IconProps) => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#00233e"
                      stroke="#00233e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
                      className="lucide lucide-circle-alert">
-                    <circle cx="12" cy="12" r="10" fill="#00233e"/>
+                    <circle cx="12" cy="12" r="8" fill="#00233e"/>
                     <line x1="12" y1="8" x2="12" y2="12" stroke="white" strokeWidth="2"/>
                     <line x1="12" y1="16" x2="12.01" y2="16" stroke="white" strokeWidth="2"/>
                 </svg>
@@ -71,13 +71,16 @@ const Icon = ({variant, color}: IconProps) => {
             )
         case "warning":
             return (
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                     stroke="#baa90e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                     className="lucide lucide-triangle-alert">
-                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
-                    <path d="M12 9v4"/>
-                    <path d="M12 17h.01"/>
+                <svg width="39" height="42" viewBox="0 0 39 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="38.7735" height="41.2308" rx="19.3867" fill="#F9F871" fill-opacity="0.5"/>
+                    <path
+                        d="M20.1565 15.4751L20.0826 21.4154H19.1333L19.0537 15.4751H20.1565ZM19.0196 23.2231C19.0196 23.0525 19.0707 22.9085 19.1731 22.791C19.2792 22.6736 19.4345 22.6148 19.6392 22.6148C19.84 22.6148 19.9935 22.6736 20.0996 22.791C20.2095 22.9085 20.2645 23.0525 20.2645 23.2231C20.2645 23.386 20.2095 23.5262 20.0996 23.6437C19.9935 23.7612 19.84 23.8199 19.6392 23.8199C19.4345 23.8199 19.2792 23.7612 19.1731 23.6437C19.0707 23.5262 19.0196 23.386 19.0196 23.2231Z"
+                        fill="#BBA90F"/>
+                    <path
+                        d="M21.7447 8.91005C20.7292 7.03975 18.0446 7.03975 17.0292 8.91005L8.48198 24.6525C7.51139 26.4401 8.80558 28.6154 10.8397 28.6154H27.9341C29.9683 28.6154 31.2624 26.4401 30.2919 24.6525L21.7447 8.91005Z"
+                        stroke="#BBA90F"/>
                 </svg>
+
             )
         case 'arrowBack':
             return (
