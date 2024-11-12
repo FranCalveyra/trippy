@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ContactCard } from './ContactCard';
-import Pepe from '../assets/pp.jpg';
+import Pepe from '../../assets/profile.jfif';
 
 const meta = {
     title: 'Components/ContactCard',
@@ -16,8 +16,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Example: Story = {
     args: {
-        name: 'Dad',
-        message: 'Have you left school?',
+        name: 'Son',
+        message: 'When are you arriving?',
         imageUrl: Pepe,
     },
 };

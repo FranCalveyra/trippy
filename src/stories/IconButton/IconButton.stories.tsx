@@ -13,11 +13,11 @@ type Story = StoryObj<typeof IconButton>
 
 export const Default: Story = {
     name:'Default',
-    render: (args) => <IconButton value={'Button'} iconVariant={'groups'} {...args}>Button</IconButton>
+    render: (args) => <IconButton value={'Button'} iconVariant={'lists'} {...args}>Button</IconButton>
 }
 
 export const Seagreen: Story = {
     name:'Seagreen',
-    render: (args) => <IconButton value={'Button'} variant={'secondary'} iconVariant={'groups'} {...args}>Button</IconButton>
+    render: (args) => <IconButton value={'Button'} variant={'secondary'} iconVariant={'lists'} {...args}>Button</IconButton>
 }
 

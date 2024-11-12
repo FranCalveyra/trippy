@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SearchBar } from './SearchBar';
-import Pepe from '../assets/pp.jpg';
+import Pepe from '../../assets/profile.jfif';
 
 
 const meta: Meta<typeof SearchBar> = {
