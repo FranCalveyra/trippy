@@ -63,7 +63,7 @@ const Icon = ({variant, color}: IconProps) => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#00233e"
                      stroke="#00233e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
                      className="lucide lucide-circle-alert">
-                    <circle cx="12" cy="12" r="10" fill="#00233e"/>
+                    <circle cx="12" cy="12" r="8" fill="#00233e"/>
                     <line x1="12" y1="8" x2="12" y2="12" stroke="white" strokeWidth="2"/>
                     <line x1="12" y1="16" x2="12.01" y2="16" stroke="white" strokeWidth="2"/>
                 </svg>
