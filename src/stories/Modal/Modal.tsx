@@ -9,7 +9,7 @@ interface ModalProps {
 
 export const Modal = ({title, message, primaryValue, secondaryValue}: ModalProps) => {
     return (
-        <div className="w-96 h-56 px-8 py-12 bg-secondary-200 rounded-modal flex-col justify-center items-center gap-4 inline-flex">
+        <div className="w-96 h-56 px-8 py-12 bg-neutral-white rounded-modal flex-col justify-center items-center gap-4 inline-flex">
             <div className="text-h3 font-bold justify-start items-center w-full">
                 {title}
             </div>

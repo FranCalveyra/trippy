@@ -15,11 +15,13 @@ const notificationVariant = cva(
     }
 );
 
+
 interface NotificationDefaultProps {
     iconVariant: IconProps["variant"];
     title: string;
     description: string;
 }
+
 
 export const Notification = ({ iconVariant, title, description }: NotificationDefaultProps) => {
     return (
@@ -38,6 +40,7 @@ export const Notification = ({ iconVariant, title, description }: NotificationDe
                          }}>
                         {title}
                     </div>
+                  
                     <div className="max-w-[320px] text-primary-700 font-normal text-sm leading-tight"
                          style={{
                              display: "webkit-box",

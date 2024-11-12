@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ProfilePicture, { ProfilePictureProps } from './ProfilePicture';
-import Pepe from '../assets/pp.jpg';
+import Pepe from '../../assets/profile.jfif';
 
 export default {
     title: 'Components/ProfilePicture',

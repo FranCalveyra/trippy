@@ -17,6 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    value: "Button"
+    value: "This is a quick message",
+    onClick: ()=>{}
   },
 };
