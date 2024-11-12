@@ -25,25 +25,26 @@ export const ChatPage: React.FC = () => {
 
             <div className="flex flex-col flex-grow space-y-2 overflow-y-auto mb-4 gap-8">
                 <div className="flex justify-start">
-                    <MessageBubble message="When are you coming home?" time="2:00pm" status="read" variant={"incoming"}/>
+                    <MessageBubble message="When are you coming home?" time="2:00pm" status="read"
+                                   variant={"incoming"}/>
                 </div>
                 <div className="flex justify-end">
                     <MessageBubble message="In a minute. Why?" time="2:02pm" status="read" variant={"outgoing"}/>
                 </div>
                 <div className="flex justify-start">
-                    <MessageBubble message="Mom's asking. Call me ASAP" time="2:03pm" status="read" variant={"incoming"}/>
+                    <MessageBubble message="Mom's asking. Call me ASAP" time="2:03pm" status="read"
+                                   variant={"incoming"}/>
                 </div>
                 <div className="flex justify-end">
-                    <MessageBubble message="Ok, got it. I'm around the corner" time="2:05pm" status="read" variant={"outgoing"}/>
+                    <MessageBubble message="Ok, got it. I'm around the corner" time="2:05pm" status="read"
+                                   variant={"outgoing"}/>
                 </div>
             </div>
-
+            //todo, change "Widget" color
             <div>
-                <div className="flex justify-end">
-                    <IconButton variant="secondary" iconVariant={"list"} value="Widget"/>
+                <div className="flex justify-end mb-4"><IconButton variant="secondary" iconVariant={"list"} value="Widget"/>
                 </div>
-
-                <div className="flex justify-around mb-4">
+                <div className="flex justify-around mb-4 gap-2">
                     <QuickMessage value="Arriving"/>
                     <QuickMessage value="Ok"/>
                     <QuickMessage value="Call you back"/>
