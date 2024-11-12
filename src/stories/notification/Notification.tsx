@@ -7,7 +7,7 @@ const notificationVariant = cva(
         variants: {
             variant: {
                 default: "w-full max-w-[393px] h-auto border-b border-neutral-600 items-center ml-7 mr-7 mt-18px mb-18px",
-                warning: "h-[150px] px-2 py-6 bg-white rounded-[13px] justify-start items-start gap-2 inline-flex",
+                warning: "h-[150px] px-2 py-6 bg-neutral-white rounded-[13px] justify-start items-start gap-2 inline-flex",
             },
         },
         defaultVariants: {
