@@ -13,9 +13,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     name: 'Default',
-    render: (args) => <Widget {...args} />, // Fixed by using the correct JSX syntax
+    render: (args) => (
+        <div className="flex justify-center items-center">
+            <Widget {...args} />
+        </div>
+    ),
     args: {
-        imagePath: "https://via.placeholder.com/211x95", // Default prop value
         widgetTitle: "Current Location",
     },
 };
