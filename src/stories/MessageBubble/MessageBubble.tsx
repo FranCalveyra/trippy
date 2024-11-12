@@ -45,12 +45,13 @@ export const MessageBubble = ({ message, time, status, variant, layout }: Messag
             <span className="text-primary-700 font-body break-words">
                 {message}
             </span>
-            <span className={`text-primary-800 text-xs flex items-center whitespace-nowrap ${layout === 'multi-line' ? 'absolute bottom-2 right-2' : 'ml-auto'}`}>
-                {time}
-                {variant === 'outgoing' && (
-                    <Icon variant={status} color="primary-700"/>
-                )}
-            </span>
+                <span
+                    className={`text-primary-800 text-xs text-[12px] flex items-center ${layout === 'multi-line' ? 'absolute bottom-2 right-3' : 'ml-auto mt-1' }`}>
+                    {time}
+                    {variant === 'outgoing' && (
+                        <Icon variant={status} color="primary-700"/>
+                    )}
+                </span>
         </div>
     );
 };
