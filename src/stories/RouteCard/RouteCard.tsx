@@ -18,9 +18,7 @@ const RouteCard = ({roadItemPropsArray, time, money}: RouteCardProps) => {
             <div className={"flex flex-row gap-1 overflow-x-auto overflow-y-hidden shrink-0 no-scrollbar"}>
                 {roadItemPropsArray.map((props, idx) => (
                     <>
-                        {/*<div className={"shrink-0"}>*/}
-                            <RoadItem key={`Road Item ${crypto.randomUUID()}`} {...props}/>
-                        {/*</div>*/}
+                        <RoadItem key={`Road Item ${crypto.randomUUID()}`} {...props}/>
                         <div className={"shrink-0"}>
                             {notLastOne(idx) &&
                                 <Icon variant={'arrow'} color={tailwindConfig.theme.colors.primary["700"]}/>}
