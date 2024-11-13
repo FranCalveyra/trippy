@@ -40,11 +40,12 @@ export const NotificationWarning = ({ iconVariant, title, description }: Notific
                     </div>
                     <div className="self-stretch text-primary-700 text-base font-normal leading-normal tracking-tight overflow-hidden"
                          style={{
-                             display: "block",
+                             display: "-webkit-box",
+                             WebkitBoxOrient: "vertical",
                              WebkitLineClamp: 3,
                              overflow: "hidden",
                              textOverflow: "ellipsis",
-                             whiteSpace: "unset",
+                             whiteSpace: "normal",
                              width: "100%",
                          }}>
                         {description}
