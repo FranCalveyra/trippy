@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import Icon, { IconProps } from "../Icon/Icon.tsx";
 
 
-const buttonVariant = cva(['rounded-lg', 'px-5 py-4'],{
+const buttonVariant = cva(['rounded-lg', 'px-5 py-5'],{
     variants:{
         variant:{
             primary:[
@@ -33,7 +33,6 @@ const IconButton = ({variant, iconVariant, value, ...rest}: IconButtonProps) => 
         <button className={buttonVariant({variant})} {...rest}>
             <div className={'flex justify-center items-center'}>
                 <Icon variant={iconVariant} color=""/>
-                <div className={'text-justify ml-3'}>{value}</div>
             </div>
         </button>
     )

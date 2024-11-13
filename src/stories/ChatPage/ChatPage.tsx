@@ -43,7 +43,7 @@ export const ChatPage: React.FC = () => {
             <div className="mb-4">
                 <div className="flex flex-col gap-2 mb-4">
                     <div className="flex justify-end mb-2">
-                        <IconButton variant="secondary" iconVariant={"list"} value="Widget"/>
+                        <IconButton variant="secondary" iconVariant={"list"} value=""/>
                     </div>
                     <div className="flex justify-around gap-2">
                         <QuickMessage value="Arriving"/>
