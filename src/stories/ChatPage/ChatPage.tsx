@@ -28,7 +28,7 @@ export const ChatPage: React.FC = () => {
             const newMessage: Message = {
                 message,
                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-                status: "sent", // Adjust status if needed
+                status: "sent",
                 variant: "outgoing"
             };
             setMessages([...messages, newMessage]);
@@ -55,12 +55,12 @@ export const ChatPage: React.FC = () => {
             <div className="mb-4">
                 <div className="flex flex-col gap-2 mb-4">
                     <div className="flex justify-end mb-2">
-                        <IconButton variant="secondary" iconVariant={"list"} value="" />
+                        <IconButton variant="secondary" iconVariant={"list"} value=""  />
                     </div>
                     <div className="flex justify-around gap-2">
-                        <QuickMessage value="Arriving" />
-                        <QuickMessage value="Ok" />
-                        <QuickMessage value="Call you back" />
+                        <QuickMessage value="Arriving" onClick={() => handleSend("Arriving")} />
+                        <QuickMessage value="Ok" onClick={() => handleSend("Ok")} />
+                        <QuickMessage value="Call you back" onClick={() => handleSend("Call you back")} />
                     </div>
                 </div>
 
