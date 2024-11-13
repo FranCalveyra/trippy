@@ -2,7 +2,7 @@ import {LocationTag} from "./LocationTag.tsx";
 import {Meta, StoryObj} from "@storybook/react";
 
 const meta: Meta<typeof LocationTag> ={
-    title: "Components/LocationTag",
+    title: "Organisms/LocationTag",
     component: LocationTag,
     tags: ['autodocs']
 }

@@ -3,7 +3,7 @@ import { ContactCard } from './ContactCard';
 import Pepe from '../../assets/profile.jfif';
 
 const meta = {
-    title: 'Components/ContactCard',
+    title: 'Organisms/ContactCard',
     component: ContactCard,
     parameters: {
         layout: 'centered',

@@ -4,7 +4,7 @@ import Pepe from '../../assets/profile.jfif';
 
 
 const meta: Meta<typeof SearchBar> = {
-    title: 'Components/SearchBar',
+    title: 'Organisms/SearchBar',
     component: SearchBar,
     parameters: {
         layout: 'centered',

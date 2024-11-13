@@ -2,7 +2,7 @@ import {ChatInput} from "./ChatInput.tsx";
 import {Meta, StoryObj} from "@storybook/react";
 
 const meta = {
-    title: 'Components/ChatInput',
+    title: 'Organisms/ChatInput',
     component: ChatInput,
     parameters: {
         layout: 'centered',

@@ -3,7 +3,7 @@ import ProfilePicture, { ProfilePictureProps } from './ProfilePicture';
 import Pepe from '../../assets/profile.jfif';
 
 export default {
-    title: 'Components/ProfilePicture',
+    title: 'Atoms/ProfilePicture',
     component: ProfilePicture,
     argTypes: {
         imageUrl: {
