@@ -22,7 +22,7 @@ export const ChatPage: React.FC = () => {
         { message: "In a minute. Why?", time: "2:02pm", status: "read", variant: "outgoing" },
         { message: "Mom's asking. Call me ASAP", time: "2:03pm", status: "read", variant: "incoming" },
         { message: "Ok, got it. I'm around the corner", time: "2:05pm", status: "read", variant: "outgoing" },
-        { message: "I’m sorry, I have no credits left, but Luke’s home. He says he is gonna call you.", time: "2:07pm", status: "read", variant: "outgoing", layout: "multi-line" },
+        { message: "I’m sorry, I ran out of credit, but Luke’s home. He says he is gonna call you.", time: "2:07pm", status: "read", variant: "outgoing", layout: "multi-line" },
         { message: "Is mom OK?", time: "2:07pm", status: "read", variant: "outgoing" },
     ]);
 
