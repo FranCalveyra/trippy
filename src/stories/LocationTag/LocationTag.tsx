@@ -7,7 +7,7 @@ interface LocationTagProps {
     variant?: "plain" | "floating"
 }
 
-const locationTagVariant = cva(["h-24 flex items-center gap-3 p-4 bg-neutral-white"],{
+const locationTagVariant = cva(["h-18 flex items-center gap-3 p-4 bg-neutral-white"],{
     variants:{
         variant:{
             plain:[

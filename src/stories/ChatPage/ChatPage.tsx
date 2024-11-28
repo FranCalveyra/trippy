@@ -21,6 +21,8 @@ export const ChatPage: React.FC = () => {
         { message: "In a minute. Why?", time: "2:02pm", status: "read", variant: "outgoing" },
         { message: "Mom's asking. Call me ASAP", time: "2:03pm", status: "read", variant: "incoming" },
         { message: "Ok, got it. I'm around the corner", time: "2:05pm", status: "read", variant: "outgoing" },
+        { message: "I’m sorry, I have no credits left. Luke’s home. He says he is gonna call you.", time: "2:07pm", status: "read", variant: "outgoing" },
+        { message: "Is mom OK?", time: "2:07pm", status: "read", variant: "outgoing" },
     ]);
 
     const handleSend = (message: string) => {
@@ -35,6 +37,16 @@ export const ChatPage: React.FC = () => {
         }
     };
 
+    function isSamePerson(msg: Message, index: number, messages: Message[]): boolean {
+        if (index == 0) {
+            return false;
+        }
+
+        console.log(`${msg.variant} == ${messages[index - 1].variant}? ${msg.variant == messages[index - 1].variant}`)
+
+        return msg.variant == messages[index - 1].variant;
+    }
+
     return (
         <div className="flex flex-col h-screen w-screen bg-white pt-4 px-4 overflow-hidden">
 
@@ -44,10 +56,12 @@ export const ChatPage: React.FC = () => {
                 <span className="text-primary-700 text-lg text-h3">Dad</span>
             </div>
 
-            <div className="flex flex-col flex-grow space-y-2 overflow-y-auto mb-4 gap-8">
-                {messages.map((msg, index) => (
-                    <div key={index} className={`flex justify-${msg.variant === "incoming" ? "start" : "end"}`}>
-                        <MessageBubble message={msg.message} time={msg.time} status={msg.status} variant={msg.variant} />
+            <div className="flex flex-col flex-grow overflow-y-auto mb-4">
+                {messages.map((msg, index, messages) => (
+                    <div key={"index" + index} className={`mt-${isSamePerson(msg, index, messages)? "2" : "4"}`}>
+                        <div key={index} className={`flex justify-${msg.variant === "incoming" ? "start" : "end"}`}>
+                            <MessageBubble message={msg.message} time={msg.time} status={msg.status} variant={msg.variant} />
+                        </div>
                     </div>
                 ))}
             </div>
