@@ -13,6 +13,7 @@ interface Message {
     time: string;
     status: string;
     variant: "incoming" | "outgoing";
+    layout?: 'single-line' | 'multi-line';
 }
 
 export const ChatPage: React.FC = () => {
@@ -21,7 +22,7 @@ export const ChatPage: React.FC = () => {
         { message: "In a minute. Why?", time: "2:02pm", status: "read", variant: "outgoing" },
         { message: "Mom's asking. Call me ASAP", time: "2:03pm", status: "read", variant: "incoming" },
         { message: "Ok, got it. I'm around the corner", time: "2:05pm", status: "read", variant: "outgoing" },
-        { message: "I’m sorry, I have no credits left. Luke’s home. He says he is gonna call you.", time: "2:07pm", status: "read", variant: "outgoing" },
+        { message: "I’m sorry, I have no credits left, but Luke’s home. He says he is gonna call you.", time: "2:07pm", status: "read", variant: "outgoing", layout: "multi-line" },
         { message: "Is mom OK?", time: "2:07pm", status: "read", variant: "outgoing" },
     ]);
 
@@ -58,9 +59,9 @@ export const ChatPage: React.FC = () => {
 
             <div className="flex flex-col flex-grow overflow-y-auto mb-4">
                 {messages.map((msg, index, messages) => (
-                    <div key={"index" + index} className={`mt-${isSamePerson(msg, index, messages)? "2" : "4"}`}>
+                    <div key={"index" + index} className={isSamePerson(msg, index, messages)? "mt-2" : "mt-4"}>
                         <div key={index} className={`flex justify-${msg.variant === "incoming" ? "start" : "end"}`}>
-                            <MessageBubble message={msg.message} time={msg.time} status={msg.status} variant={msg.variant} />
+                            <MessageBubble message={msg.message} time={msg.time} status={msg.status} variant={msg.variant} layout={msg.layout ?? "single-line"}/>
                         </div>
                     </div>
                 ))}
