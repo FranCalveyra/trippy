@@ -12,13 +12,12 @@ and documentation link should redirect to the Storybook)
 
 ## Screenshots
 
-![Trippy Screenshot 1](path/to/screenshot1.png)
-![Trippy Screenshot 2](path/to/screenshot2.png)
+![Login](images/trippy-login.png)
+![Home](images/trippy-home.png)
 
 ## Links
 
-- [Official Website](https://trippy.example.com)
-- [Documentation](https://docs.trippy.example.com)
+- [Storybook](http://francalveyra.github.io/trippy)
 
 ## Run the application locally
 ```shell
